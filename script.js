@@ -26,11 +26,11 @@ continue_btn.onclick = ()=>{
     quiz_box.classList.add("activeQuiz"); //show quiz box
     showQuetions(0); //calling showQestions function
     queCounter(1); //passing 1 parameter to queCounter
-    startTimer(15); //calling startTimer function
+    startTimer(30); //calling startTimer function
     startTimerLine(0); //calling startTimerLine function
 }
 
-let timeValue =  15;
+let timeValue = 30;
 let que_count = 0;
 let que_numb = 1;
 let userScore = 0;
@@ -45,7 +45,7 @@ const quit_quiz = result_box.querySelector(".buttons .quit");
 restart_quiz.onclick = ()=>{
     quiz_box.classList.add("activeQuiz"); //show quiz box
     result_box.classList.remove("activeResult"); //hide result box
-    timeValue = 15; 
+    timeValue = 30;
     que_count = 0;
     que_numb = 1;
     userScore = 0;
@@ -100,7 +100,7 @@ function showQuetions(index){
     + '<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
     que_text.innerHTML = que_tag; //adding new span tag inside que_tag
     option_list.innerHTML = option_tag; //adding new div tag inside option_tag
-    
+
     const option = option_list.querySelectorAll(".option");
 
     // set onclick attribute to all available options
@@ -119,7 +119,7 @@ function optionSelected(answer){
     let userAns = answer.textContent; //getting user selected option
     let correcAns = questions[que_count].answer; //getting correct answer from array
     const allOptions = option_list.children.length; //getting all option items
-    
+
     if(userAns == correcAns){ //if user selected option is equal to array's correct answer
         userScore += 1; //upgrading score value with 1
         answer.classList.add("correct"); //adding green color to correct selected option
@@ -132,7 +132,7 @@ function optionSelected(answer){
         console.log("Wrong Answer");
 
         for(i=0; i < allOptions; i++){
-            if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer 
+            if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer
                 option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
                 option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to matched option
                 console.log("Auto selected correct answer.");
@@ -150,17 +150,46 @@ function showResult(){
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
-    if (userScore > 3){ // if user scored more than 3
+    if (userScore == 10){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
-        let scoreTag = '<span>and congrats! 🎉, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>සුභ පැතුම්! 🎉,ඔබ ප්‍රශ්න සියල්ලටම නිවැරදිව පිළිතුරු ලබා දී ඇත.</p></span>';
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
     }
-    else if(userScore > 1){ // if user scored more than 1
-        let scoreTag = '<span>and nice 😎, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+    else if(userScore == 9 ){ // if user scored more than 1
+        let scoreTag = '<p style="text-align: center;"> ඔබ ප්‍රශ්න 10 න් 9 ට නිවැරදිව පිළිතුරු ලබා දී ලකුණු 90% ලබා ගෙන ඇත.</p>';
+        scoreText.innerHTML = scoreTag;
+    }
+
+    else if(userScore == 8){ // if user scored more than 1
+        let scoreTag = '<p style="text-align: center;"> ඔබ ප්‍රශ්න 10 න් 8 ට නිවැරදිව පිළිතුරු ලබා දී ලකුණු 80% ලබා ගෙන ඇත.</p>';
+        scoreText.innerHTML = scoreTag;
+    }
+    else if(userScore == 7){ // if user scored more than 1
+        let scoreTag = '<p style="text-align: center;">ඔබ ප්‍රශ්න 10 න් 7 ට නිවැරදිව පිළිතුරු ලබා දී ලකුණු 70% ලබා ගෙන ඇත.</p>';
+        scoreText.innerHTML = scoreTag;
+    }
+    else if(userScore == 6){ // if user scored more than 1
+        let scoreTag = '<p style="text-align: center;">ඔබ ප්‍රශ්න 10 න් 6 ට නිවැරදිව පිළිතුරු ලබා දී ලකුණු 60% ලබා ගෙන ඇත.</p>';
+        scoreText.innerHTML = scoreTag;
+    }
+    else if(userScore == 5){ // if user scored more than 1
+        let scoreTag = '<p style="text-align: center;">ඔබ ප්‍රශ්න 10 න් 5 ට නිවැරදිව පිළිතුරු ලබා දී ලකුණු 50% ලබා ගෙන ඇත.</p>';
+        scoreText.innerHTML = scoreTag;
+    }
+    else if(userScore == 4){ // if user scored more than 1
+        let scoreTag = '<p style="text-align: center;">ඔබ ප්‍රශ්න 10 න් 4 ට නිවැරදිව පිළිතුරු ලබා දී ලකුණු 40% ලබා ගෙන ඇත.</p>';
+        scoreText.innerHTML = scoreTag;
+    }
+    else if(userScore == 3){ // if user scored more than 1
+        let scoreTag = '<p style="text-align: center;">ඔබ ප්‍රශ්න 10 න් 3 ට නිවැරදිව පිළිතුරු ලබා දී ලකුණු 30% ලබා ගෙන ඇත.</p>';
+        scoreText.innerHTML = scoreTag;
+    }
+    else if(userScore == 2){ // if user scored more than 1
+        let scoreTag = '<p style="text-align: center;">ඔබ ප්‍රශ්න 10 න් 2 ට නිවැරදිව පිළිතුරු ලබා දී ලකුණු 20% ලබා ගෙන ඇත.</p>';
         scoreText.innerHTML = scoreTag;
     }
     else{ // if user scored less than 1
-        let scoreTag = '<span>and sorry 😐, You got only <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<p style="text-align: center;">දුර්වලයි! 😌, ඔබ සියලුම ප්‍රශ්න වලට වැරදි පිළිතුරු ලබා දී ඇත.</p>';
         scoreText.innerHTML = scoreTag;
     }
 }
@@ -171,7 +200,7 @@ function startTimer(time){
         timeCount.textContent = time; //changing the value of timeCount with time value
         time--; //decrement the time value
         if(time < 9){ //if timer is less than 9
-            let addZero = timeCount.textContent; 
+            let addZero = timeCount.textContent;
             timeCount.textContent = "0" + addZero; //add a 0 before time value
         }
         if(time < 0){ //if timer is less than 0
