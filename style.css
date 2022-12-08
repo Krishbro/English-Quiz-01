@@ -201,7 +201,7 @@ section .option_list .option{
     background: aliceblue;
     border: 1px solid #84c5fe;
     border-radius: 5px;
-    padding: 5px 7px;
+    padding: 10px 10px;
     font-size: 15px;
     margin-bottom: 5px;
     cursor: pointer;
