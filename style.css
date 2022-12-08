@@ -22,7 +22,7 @@ background: #007bff;
 .quiz_box,
 .result_box{
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -58,7 +58,7 @@ background: #007bff;
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
-    top: 40%;
+    top: 30%;
 }
 
 .info_box .info-title{
@@ -117,7 +117,7 @@ background: #007bff;
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
-  top: 40%;
+  top: 30%;
   font-weight: bold;
 /* padding-top: 100px; */
 
