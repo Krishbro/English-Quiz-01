@@ -1,40 +1,42 @@
+<!-- Created By CodingNepal - www.codingnepalweb.com  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Quiz App | CodingNepal</title>
     <link rel="stylesheet" href="style.css">
+    <title>TRICAL HUB Quiz App</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <!-- FontAweome CDN Link for Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
+
     <!-- start Quiz button -->
-    <div class="start_btn"><button>Start Quiz</button></div>
+    <div class="start_btn"><button>ආරම්භ කරන්න</button></div>
 
     <!-- Info Box -->
     <div class="info_box">
-        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-title"><span>උපදෙස් පත්‍රිකාව</span></div>
         <div class="info-list">
-            <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
-            <div class="info">2. Once you select your answer, it can't be undone.</div>
-            <div class="info">3. You can't select any option once time goes off.</div>
-            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
-            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+            <div class="info">1. ප්‍රශ්න සියල්ලටම පිළිතුරු සපයන්න</div>
+            <div class="info">2. ඔබට එක් ප්‍රශ්නයකට <span>තත්පර 15</span> කාලයක් ලැබෙනු ඇත.</div>
+            <div class="info">3. පිළිතුරු ලබා දුන් පසු එය නැවත වෙනස් කල නොහැක.</div>
+            <div class="info">4. සියලුම ප්‍රශ්න වලට පිළිතුරු ලබා දුන් ලකුනු ප්‍රතිශතයක් ලෙස බලා ගත හැක.</div>
         </div>
         <div class="buttons">
-            <button class="quit">Exit Quiz</button>
-            <button class="restart">Continue</button>
+            <button class="quit">ඉවත් වන්න</button>
+            <button class="restart">ඉදිරියට</button>
         </div>
     </div>
 
     <!-- Quiz Box -->
     <div class="quiz_box">
         <header>
-            <div class="title">Awesome Quiz Application</div>
+            <div class="title">TRICAL HUB QUIZ</div>
             <div class="timer">
                 <div class="time_left_txt">Time Left</div>
-                <div class="timer_sec">15</div>
+                <div class="timer_sec">30</div>
             </div>
             <div class="time_line"></div>
         </header>
@@ -52,7 +54,7 @@
             <div class="total_que">
                 <!-- Here I've inserted Question Count Number from JavaScript -->
             </div>
-            <button class="next_btn">Next Que</button>
+            <button class="next_btn">ඉලග ප්‍රශ්නය</button>
         </footer>
     </div>
 
@@ -61,18 +63,22 @@
         <div class="icon">
             <i class="fas fa-crown"></i>
         </div>
-        <div class="complete_text">You've completed the Quiz!</div>
+        <div style="color:red;" class="complete_text">සියලුම ප්‍රශ්න වලට ඔබ පිළිතුරු ලබා දී ඇත. </div>
         <div class="score_text">
             <!-- Here I've inserted Score Result from JavaScript -->
         </div>
         <div class="buttons">
-            <button class="restart">Replay Quiz</button>
-            <button class="quit">Quit Quiz</button>
+            <button class="restart">Try again</button>
+            <button class="quit">Exit</button>
         </div>
+        <!-- <h1>නිවෙස් වයරින් දැනුම හා NVQ විභාග සදහා එන අනුමාන ප්‍රශ්න හා පිලිතුරු SMS මාර්ගයෙන් ඔබේ ජංගම දුරකතනයට දිනපතා ලබා ගැනීමට පහලින් රෙජිස්ටර් වෙන්න</h1>
+              <a href="sms:77000?body=Reg trical">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEid-SK0I94gfoQ2j86kxIBlplHuowyVoNw2uqXkeo-QytJi97Qr5MJ1YiqRBTjfH_tO7eZODRmpJwW11g9qKI5p7CdF1Et05j7IxpzT0hGx_MSkvFDkt7XOz2ZqCcfdVoYvuEwe9C6Qd8K0HJgRommKFK_H8pR2Rtl0wOXHLtTuPQz21wWFWJ1hTRq8rw/s16000/01.gif" alt="">
+                <p style="text-align:right;color:#B9E0FF;padding-top: 40px;">Daily Rs 2 + tax</p> -->
     </div>
 
     <!-- Inside this JavaScript file I've inserted Questions and Options only -->
-    <script src="questions.js"></script>
+    <script src="que.js"></script>
 
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
     <script src="script.js"></script>
